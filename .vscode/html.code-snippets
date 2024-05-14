@@ -182,4 +182,13 @@
 	  ],
 	  "description": "通用ioniclist樣板"
 	}
+	,
+	"X ErrorTip": {
+	  "prefix": "x-ErrorTip",
+	  "body": [
+		"<uofx-form-error-tip [control]=\"form?.controls.message\">",
+		"</uofx-form-error-tip>"
+	  ],
+	  "description": "通用ioniclist樣板"
+	}
   }
