@@ -85,13 +85,17 @@ this.dialogCtrl.createFlexibleScreen({
   component: SelectDataComponent,
   params: {
      /*開窗要帶的參數*/
+     apiUrl:this.pluginSetting.entryHost
   }
 }).afterClose.subscribe({
   next: res => {
   /*關閉視窗後處理的訂閱事件*/
-  if (res) {  }
-}
-});
+  if (res) {
+      this.value = res;
+      this.form.patchValue(res);
+  }
+  }}
+);
   }
 
   initForm() {
