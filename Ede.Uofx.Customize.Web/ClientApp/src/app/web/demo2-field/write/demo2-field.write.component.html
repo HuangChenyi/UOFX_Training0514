@@ -3,28 +3,48 @@
   </uofx-form-field-name>
 </div>
 <div class="fw-control">
+  <button
+     class="e-btn u-btn-primary buttons-opposite"
+      data-ripple="true"
+     (click)="SelectData()">選取資料
+   </button>
   <table [formGroup]="form">
-    <tr>
-      <!-- hello world 顯示歡迎訊息 -->
-      <th colspan="3">
-        <span n *ngIf="exProps?.isShowHelloWorld ? true : false"
-          >hello 外掛欄位 write mode</span
-        >
-      </th>
-    </tr>
-    <tr>
-      <td colspan="3">
 
-        <input type="text" pInputText formControlName="message"/>
-
-        <uofx-form-error-tip [control]="form?.controls.message">
-        </uofx-form-error-tip>
-      </td>
-    </tr>
+  <tr>
+    <td>
+      <label for="companyName">Company Name:</label>
+    </td>
+    <td>
+      <input type="text" id="companyName" formControlName="companyName">
+  <uofx-form-error-tip [control]="form?.controls.companyName">
+  </uofx-form-error-tip>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <label for="address">Address:</label>
+    </td>
+    <td>
+      <input type="text" id="address" formControlName="address">
+      <uofx-form-error-tip [control]="form?.controls.address">
+      </uofx-form-error-tip>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <label for="phoneNumber">Phone Number:</label>
+    </td>
+    <td>
+      <input type="text" id="phoneNumber" formControlName="phone">
+      <uofx-form-error-tip [control]="form?.controls.phone">
+      </uofx-form-error-tip>
+    </td>
+  </tr>
   </table>
   <div style="color: red;">
     {{errorMsg}}
   </div>
 </div>
+
 
 

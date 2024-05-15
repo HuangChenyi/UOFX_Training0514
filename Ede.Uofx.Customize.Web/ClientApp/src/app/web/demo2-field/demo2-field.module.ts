@@ -33,6 +33,7 @@ import { UofxPluginApiService } from '@uofx/plugin-api';
 import { UofxTextareaModule } from '@uofx/web-components/textarea';
 import { UofxToastModule } from '@uofx/web-components/toast';
 import { UofxUserSelectModule } from '@uofx/web-components/user-select';
+import { SelectDataComponent } from './select-data/select-data.component';
 
 /*
 此為外掛欄位module的樣板，修改/置換的項事如下
@@ -103,7 +104,7 @@ const BASIC_SERVICES = [
   ],
   providers: [BASIC_SERVICES, UofxPluginApiService],
   exports: [...COMPONENTS],
-  declarations: [...COMPONENTS],
+  declarations: [...COMPONENTS, SelectDataComponent],
 })
 
 /*修改*/

@@ -19,6 +19,8 @@ import { BpmFwWriteComponent, UofxFormTools } from '@uofx/web-components/form';
 import { ChangeDetectorRef, Component, Input, OnInit } from '@angular/core';
 
 import { Demo2FieldExProps } from '../props/demo2-field.props.component';
+import { SelectDataComponent } from '../select-data/select-data.component';
+import { UofxDialogController } from '@uofx/web-components/dialog';
 
 /*修改*/
 /*↑↑↑↑修改import 各模式的Component↑↑↑↑*/
@@ -40,12 +42,13 @@ export class Demo2FieldWriteComponent
   /*修改*/
   /*置換className*/
   @Input() exProps: Demo2FieldExProps;
-
+ value:CustomerInfo;
   form: UntypedFormGroup;
   constructor(
     private cdr: ChangeDetectorRef,
     private fb: UntypedFormBuilder,
-    private tools: UofxFormTools
+    private tools: UofxFormTools,
+    private dialogCtrl: UofxDialogController
   ) {
     super();
   }
@@ -76,9 +79,26 @@ export class Demo2FieldWriteComponent
     this.cdr.detectChanges();
   }
 
+  SelectData()
+  {
+this.dialogCtrl.createFlexibleScreen({
+  component: SelectDataComponent,
+  params: {
+     /*開窗要帶的參數*/
+  }
+}).afterClose.subscribe({
+  next: res => {
+  /*關閉視窗後處理的訂閱事件*/
+  if (res) {  }
+}
+});
+  }
+
   initForm() {
     this.form = this.fb.group({
-      message: [this.value?.message || '', Validators.required], // Add required validation
+      companyName: [this.value?.companyName || '', Validators.required],
+      address: [this.value?.address || '', Validators.required],
+      phone: [this.value?.phone || '', Validators.required],
     });
 
     if (this.selfControl) {
@@ -152,4 +172,10 @@ function checkFieldDefaultValidator(checkDefaultValidator: boolean, formControl:
   else if (checkDefaultValidator && formControl.valid) {
     formControl.updateValueAndValidity();
   }
+}
+
+export interface CustomerInfo {
+  companyName: string;
+  address: string;
+  phone: string;
 }

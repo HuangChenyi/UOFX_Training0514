@@ -76,6 +76,8 @@ export class Demo1FieldWriteComponent
     this.cdr.detectChanges();
   }
 
+  Onclcik(){}
+
   initForm() {
     this.form = this.fb.group({
       message: [this.value?.message || '', Validators.required], // Add required validation
