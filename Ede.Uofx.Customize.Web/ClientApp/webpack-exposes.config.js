@@ -4,11 +4,13 @@ const exposes = {
   //屬性名稱會對應到/assets/configs/fields-runtime.json 的exposedModule
   web: {
     './TemplateField': './src/app/web/template-field/template-field.module.ts'
-    //勿刪除存放Web欄位的路徑
+    ,'./Demo1Field' : './src/app/web/demo1-field/demo1-field.module.ts'
+        //勿刪除存放Web欄位的路徑
   },
   app: {
      './TemplateField': './src/app/web/template-field/template-field.module.ts'
-    //勿刪除存放App欄位的路徑
+    ,'./Demo1Field' : './src/app/mobile/demo1-field/demo1-field.module.ts'
+        //勿刪除存放App欄位的路徑
   }
 };
 

@@ -1,12 +1,15 @@
-{
+﻿{
   "fieldGroups": [
     {
       "code": "group1",
       "name": "群組一"
+    },
+    {
+      "code": "group2",
+      "name": "群組二"
     }
   ],
   "fields": [
-
     {
       "group": "group1",
       "code": "template-field",
@@ -17,6 +20,18 @@
         "defaultRows": 1,
         "minCols": 1,
         "minRows": 1
+      }
+    },
+    {
+      "group": "group2",
+      "code": "demo1-field",
+      "name": "外掛欄位範例1",
+      "icon": "assets/icons/u-plugin-form.svg",
+      "sizeConfig": {
+        "defaultCols": "2",
+        "defaultRows": "2",
+        "minCols": "1",
+        "minRows": "1"
       }
     }
   ]
