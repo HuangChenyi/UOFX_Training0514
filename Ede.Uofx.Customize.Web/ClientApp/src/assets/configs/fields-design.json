@@ -6,7 +6,7 @@
     },
     {
       "code": "group2",
-      "name": "群組二"
+      "name": "群組二二二"
     }
   ],
   "fields": [
@@ -30,6 +30,18 @@
       "sizeConfig": {
         "defaultCols": "2",
         "defaultRows": "2",
+        "minCols": "1",
+        "minRows": "1"
+      }
+    },
+    {
+      "group": "group2",
+      "code": "demo2-field",
+      "name": "外掛欄位範例2",
+      "icon": "assets/icons/u-plugin-form.svg",
+      "sizeConfig": {
+        "defaultCols": "3",
+        "defaultRows": "3",
         "minCols": "1",
         "minRows": "1"
       }

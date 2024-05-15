@@ -14,5 +14,13 @@
       "exposedModule": "./Demo1Field",
       "moduleName": "Demo1FieldAppModule"
     }
+  },
+  "demo2-field": {
+    "exposedModule": "./Demo2Field",
+    "moduleName": "Demo2FieldModule",
+    "app": {
+      "exposedModule": "./Demo2Field",
+      "moduleName": "Demo2FieldAppModule"
+    }
   }
 }

@@ -2,7 +2,6 @@
   <uofx-form-field-name [name]="name" [required]="required">
   </uofx-form-field-name>
 </div>
-這是填寫介面
 <div class="fw-control">
   <table [formGroup]="form">
     <tr>
@@ -19,13 +18,6 @@
         <input type="text" pInputText formControlName="message"/>
 
         <uofx-form-error-tip [control]="form?.controls.message">
-        </uofx-form-error-tip>
-      </td>
-      <td colspan="3">
-
-        <input type="text" pInputText formControlName="phone"/>
-
-        <uofx-form-error-tip [control]="form?.controls.phone">
         </uofx-form-error-tip>
       </td>
     </tr>

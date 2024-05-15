@@ -5,11 +5,13 @@ const exposes = {
   web: {
     './TemplateField': './src/app/web/template-field/template-field.module.ts'
     ,'./Demo1Field' : './src/app/web/demo1-field/demo1-field.module.ts'
+        ,'./Demo2Field' : './src/app/web/demo2-field/demo2-field.module.ts'
         //勿刪除存放Web欄位的路徑
   },
   app: {
      './TemplateField': './src/app/web/template-field/template-field.module.ts'
     ,'./Demo1Field' : './src/app/mobile/demo1-field/demo1-field.module.ts'
+        ,'./Demo2Field' : './src/app/mobile/demo2-field/demo2-field.module.ts'
         //勿刪除存放App欄位的路徑
   }
 };
