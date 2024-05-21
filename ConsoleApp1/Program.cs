@@ -43,8 +43,12 @@ namespace ConsoleApp1
                         DeptCode = dept.Code,
                         AttachFiles = fileList,
                         Fields =
-                        { C002=DateTime.Today,
-                         C003="小黃",C004="高雄市前鎮區.."
+                        { C003=@"            {
+                ""companyName"": ""123"",
+    ""address"": ""復興四路2號4樓A17 一等一科技"",
+    ""phone"": ""0912058414""
+}"
+
                          }
 
                     }
